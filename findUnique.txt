@@ -1,0 +1,13 @@
+ ##Find Unique
+
+int findUnique(int *arr, int size)
+{
+ int i=0; 
+    int res=arr[0];
+    while(i<size)//Write your code here
+    {
+      res^=arr[++i];
+    
+    }
+    return res;
+}
