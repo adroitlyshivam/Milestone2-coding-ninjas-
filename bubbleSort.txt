@@ -1,0 +1,20 @@
+ ##Code Bubble Sort
+
+
+
+void bubbleSort(int *input, int size)
+{
+  int iterator=1;
+    while(iterator<size){
+    for(int i=0;i<size-iterator;i++)
+    {
+        if(input[i]>input[i+1]){
+            int temp=input[i+1];
+            input[i+1]=input[i];
+            input[i]=temp;
+        }
+    }
+        iterator++;
+        }
+    return;
+}
