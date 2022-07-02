@@ -1,0 +1,29 @@
+ ## Check Array Rotation
+
+questions@@
+You have been given an integer array/list(ARR) of size N. 
+It has been sorted(in increasing order) and then rotated
+by some number 'K' in the right hand direction.
+    
+    
+    
+    
+    
+int arrayRotateCheck(int *input, int size)
+{
+    int temp=0;
+    for(int i=0;i<size;i++){
+        if(input[i+1]>input[i]&&input[i]>input[size-1]){
+            temp++;
+        }
+        else
+        {
+            break;
+        }
+    }
+    if(temp==0){
+        return 0;
+    }
+    else
+    return temp+1;
+}
