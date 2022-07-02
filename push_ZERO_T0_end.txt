@@ -1,0 +1,29 @@
+ ###Push Zeros to end
+
+
+
+void pushZeroesEnd(int *input, int size)
+{
+    int k=0;
+    int l=size-1;
+   // for(int i=0;i<size;i++){
+    while(k<l){
+        if(input[k]==0){
+
+                int temp=input[k];
+                for(int f=k;f<l;l++){
+                    int temp1=input[f+1];
+                    input[f+1]=input[f];
+                    input[f]=temp1;
+                }
+                input[l]=temp;
+                l--;
+                k++;
+            }
+            else
+            {
+                k++;
+            }
+    }
+    return;
+}
