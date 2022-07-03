@@ -1,0 +1,42 @@
+ 
+##Largest Row or Column
+
+
+void findLargest(int **input, int nRows, int mCols)
+{
+    int k=0;
+    int l=0;
+    int RmaxSum=0;
+    int CmaxSum=0;
+  for(int i=0;i<nRows;i++){
+      int sum=0;
+      for(int j=0;j<mCols;j++){
+          sum+=input[i][j]; 
+      }
+      if(RmaxSum<sum){
+          int temp=RmaxSum;
+          RmaxSum=sum;
+          k=i;
+      }
+  }
+    for(int j=0;j<mCols;j++){
+        int sum=0;
+        for(int i=0;i<nRows;i++){
+            sum+=input[i][j];
+        }
+          if(CmaxSum<sum){
+          int temp=CmaxSum;
+          CmaxSum=sum;
+          sum=0;
+         l=j;
+      }
+        
+    }
+      if(RmaxSum==CmaxSum&&RmaxSum==0&&CmaxSum==0)
+    cout<<"row"<<" "<<"0"<<" "<<"-2147483648";
+   else if(RmaxSum>=CmaxSum)
+    cout<<"row"<<" "<<k<<" "<<RmaxSum;
+    else
+        cout<<"column"<<" "<<l<<" "<<CmaxSum;
+    return ;																																																																																																																																																																																																																																																																																																																																																																																																																																								
+}
