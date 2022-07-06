@@ -1,0 +1,22 @@
+ # Highest Occuring Character
+
+char highestOccurringChar(char input[]) {
+   int n=strlen(input);
+    int l,k;
+   int max=0;
+    for(int i=0;i<n;i++){
+         int temp=0;
+        for(int j=i;j<n;j++){
+            if(input[i]==input[j]){
+                temp++;
+                k=input[i];
+            }
+        }
+            if(max<temp){
+                max=temp;
+                l=k;
+            }
+    
+    }
+    return l;
+}
