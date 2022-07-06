@@ -1,0 +1,45 @@
+##Spiral Print 
+
+void spiralPrint(int **input, int m, int n)
+{
+    int a=m*n;
+    int count=0;
+    int rs=0;
+    int re=m-1;
+    int cs=0;
+    int ce=n-1;
+    while(count!=a)
+{   for(int i=cs;i<=ce;i++)
+    {
+        cout<<input[rs][i]<<" ";
+        count++;
+    }
+    
+    rs++;
+    
+     for(int i=rs;i<=re;i++)
+    {
+        cout<<input[i][ce]<<" ";
+        count++;
+    }
+    
+    ce--;
+    
+     for(int i=ce;i>=cs;i--)
+    {
+        cout<<input[re][i]<<" ";
+        count++;
+    }
+    
+    re--;
+    
+     for(int i=re;i>=rs;i--)
+    {
+        cout<<input[i][cs]<<" ";
+        count++;
+    }
+    
+    cs++;
+}
+}
+    
