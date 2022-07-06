@@ -1,0 +1,20 @@
+ #Remove character
+
+#question-
+#  For a given a string(str) and a character X, write a function 
+#  to remove all the occurrences of X from the given string
+
+void removeAllOccurrencesOfChar(char input[], char c) {
+     int n=strlen(input);
+    for(int i=0;i<n;i++){
+        int temp=0;
+        if(input[i]==c){
+             temp=input[i];
+            for(int j=i;j<n;j++){
+                input[j]=input[j+1];
+            }
+        }
+        
+    }
+    return;
+}
